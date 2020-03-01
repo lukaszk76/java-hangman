@@ -6,13 +6,13 @@ import java.util.Scanner;
 public class Player {
 	private String word;
 	private ArrayList<String> guessedLetters = new ArrayList();
-	private IWordProvider wordProvider = new WordProviderFromFile();
+	private IWordProvider wordProvider = new WordProviderFromWeb();
 	private HangmanDisplay hangmanDisplayer = new HangmanDisplay();
 	private Scanner scanner = new Scanner(System.in);
 
 	public void play() {
-		word = wordProvider.nextWord();
-		System.out.println(word);
+		word = wordProvider.nextWord().toLowerCase();
+		
 		boolean won = false;
 
 		for (int round = 0; round < 7; round++) {
@@ -26,6 +26,7 @@ public class Player {
 		}
 		if (!won) {
 			System.out.println("You are a hangman!!!");
+			System.out.println("The word is: " + word);
 		}
 
 	}
