@@ -1,11 +1,17 @@
 package pl.edu.agh.hangman;
 
+import java.util.Scanner;
+
 public class WordProviderFromKeyboard implements IWordProvider{
 
 	@Override
 	public String nextWord() {
-		// TODO Auto-generated method stub
-		return null;
+		String word = null;
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter a word:");
+		word = keyboard.next();
+		keyboard.close();
+		return word;
 	}
 
 }

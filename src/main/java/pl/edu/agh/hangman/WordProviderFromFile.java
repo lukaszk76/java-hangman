@@ -11,7 +11,8 @@ public class WordProviderFromFile implements IWordProvider {
 	String word = null;
 	
 	public ArrayList<String> loadWord() {
-		File file = new File("C:\\Users\\student12\\hangman\\java-hangman\\src\\main\\resources\\slowa.txt");
+		//File file = new File("C:\\Users\\student12\\hangman\\java-hangman\\src\\main\\resources\\slowa.txt");
+		File file = new File("C:\\Users\\student3\\downloads\\java-hangman\\src\\main\\resources\\slowa.txt");
 		try {
 			Scanner sc = new Scanner(file);
 			while (sc.hasNextLine()) {
