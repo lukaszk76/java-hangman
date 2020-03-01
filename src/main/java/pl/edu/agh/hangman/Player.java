@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Player {
 	private String word;
 	private ArrayList<String> guessedLetters = new ArrayList();
-	private IWordProvider wordProvider = new WordProviderFromWeb();
+	private IWordProvider wordProvider = new WordProviderFromFile();
 	private HangmanDisplay hangmanDisplayer = new HangmanDisplay();
 	private Scanner scanner = new Scanner(System.in);
 	
@@ -44,7 +44,6 @@ public class Player {
 	}
 	
 	private String displayMask(String guess) {
-		
 		
 		for (int i = 0; i<word.length(); i++) {
 			if (word.substring(i, i+1).equals(guess)) {
