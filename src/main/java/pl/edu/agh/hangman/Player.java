@@ -6,13 +6,12 @@ import java.util.Scanner;
 public class Player {
 	private String word;
 	private ArrayList<String> guessedLetters = new ArrayList();
-	private WordProvider IWordProvider = new WordProviderFromFile();
+	private IWordProvider wordProvider = new WordProviderFromWeb();
 	private HangmanDisplay hangmanDisplayer = new HangmanDisplay();
 	private Scanner scanner = new Scanner(System.in);
 	
 	public void play() {
-		//word = wordProvider.nextWord();
-		word = "test"; //to be removed when WordProvider is implemented
+		word = wordProvider.nextWord();
 		
 		for (int round = 0; round <7; round++ ){
 				String letter = this.guess();

@@ -1,6 +1,6 @@
 package pl.edu.agh.hangman;
 
-public class WordProviderFromWeb implements IWordProvider {
+public class WordProviderFromKeyboard implements IWordProvider{
 
 	@Override
 	public String nextWord() {
@@ -8,5 +8,4 @@ public class WordProviderFromWeb implements IWordProvider {
 		return null;
 	}
 
-	
 }
