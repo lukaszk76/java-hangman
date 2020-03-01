@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Player {
 	private String word;
 	private ArrayList<String> guessedLetters = new ArrayList();
-	private WordProvider IWordProvider = new WordProviderFromFile();
+	//private WordProvider IWordProvider = new WordProviderFromFile();
 	private HangmanDisplay hangmanDisplayer = new HangmanDisplay();
 	private Scanner scanner = new Scanner(System.in);
 	
