@@ -12,18 +12,24 @@ public class Player {
 	
 	public void play() {
 		word = wordProvider.nextWord();
+		System.out.println(word);
+		boolean won = false;
 		
 		for (int round = 0; round <7; round++ ){
 				String letter = this.guess();
 				if (checkResult(letter)) {
 					System.out.println("you won!!!");
+					won = true;
 				}
 				else {
 					hangmanDisplayer.nextImage(round);
 				}
 			}
-		System.out.println("You are a hangman!!!");
+		if (!won) {
+			System.out.println("You are a hangman!!!");
 		}
+		
+	}
 	
 	
 	private String  guess() {
