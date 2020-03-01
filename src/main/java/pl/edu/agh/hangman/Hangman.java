@@ -56,7 +56,7 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
-    	HangmanDisplay hang = new HangmanDisplay();
-    	hang.nextImage(1);
+    	Player player = new Player();
+    	player.play();
     }
 }
