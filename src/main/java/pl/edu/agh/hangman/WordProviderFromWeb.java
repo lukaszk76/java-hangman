@@ -35,8 +35,7 @@ public class WordProviderFromWeb implements IWordProvider {
 			
 			e.printStackTrace();
 		}
-		
-		System.out.println(word);
+		word = word.substring(word.lastIndexOf(":")+2, word.lastIndexOf("}")-1 );
 		return word;
 	}
 
